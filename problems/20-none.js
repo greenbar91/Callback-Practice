@@ -29,30 +29,37 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here
+  let newArr = true;
+
+  array.forEach((element) => {
+    if (!cb(element)) {
+      newArr = true;
+    } else {
+      newArr = false
+    }
+  });
+  return newArr;
 }
 
-Examples:
-
-let result1 = none(['ruby', 'topaz', 'opal'], function(w) {
-    return w.includes('e');
+let result1 = none(["ruby", "topaz", "opal"], function (w) {
+  return w.includes("e");
 });
-console.log(result1);   // true
+console.log(result1); // true
 
-let result2 = none(['ruby', 'topaz', 'sapphire', 'opal'], function(w) {
-    return w.includes('e');
+let result2 = none(["ruby", "topaz", "sapphire", "opal"], function (w) {
+  return w.includes("e");
 });
-console.log(result2);   // false
+console.log(result2); // false
 
-let result3 = none([4, 5, 7, 1], function(n) {
-    return n < 0;
+let result3 = none([4, 5, 7, 1], function (n) {
+  return n < 0;
 });
-console.log(result3);   // true
+console.log(result3); // true
 
-let result4 = none([4, -5, 7, -1], function(n) {
-    return n < 0;
+let result4 = none([4, -5, 7, -1], function (n) {
+  return n < 0;
 });
-console.log(result4);   // false
+console.log(result4); // false
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
