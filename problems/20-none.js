@@ -29,16 +29,14 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  let newArr = true;
 
-  array.forEach((element) => {
-    if (!cb(element)) {
-      newArr = true;
-    } else {
-      newArr = false
+  for(let i = 0; i < array.length; i++) {
+    if (cb(array[i])) {
+      return false;
     }
-  });
-  return newArr;
+  };
+
+  return true;
 }
 
 let result1 = none(["ruby", "topaz", "opal"], function (w) {
