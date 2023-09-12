@@ -5,25 +5,16 @@ the array return true when passed into the callback.
 
 Do not use the built in Array.every.
 
-Examples:
-
-let isEven = function (num) {
-    return num % 2 === 0;
-};
-
-let hasO = function(string) {
-    return string.includes('o');
-};
-
-console.log(myEvery([4, 8, 6, 10], isEven));            // true
-console.log(myEvery([4, 7, 6, 10], isEven));            // false
-console.log(myEvery(['book', 'door'], hasO));           // true
-console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
 *******************************************************************************/
 
 function myEvery(array, cb) {
-
-
+let result = true;
+    array.forEach( element => {
+        if(!cb(element)){
+            result = false;
+        }
+    })
+    return result;
 }
 
 let isEven = function (num) {

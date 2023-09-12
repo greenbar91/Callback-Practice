@@ -29,8 +29,11 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 *******************************************************************************/
 
 function andSelect(array, cb1, cb2) {
-
-
+let newArr = [];
+array.forEach( element => {
+  if(cb1(element) && cb2(element)) newArr.push(element)
+})
+return newArr;
 }
 
 let isEven = function (n) {
