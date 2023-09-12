@@ -38,10 +38,14 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here
+    let counter = 0;
+    array.forEach((element, i) => {
+        if(cb(element, i)) counter++
+    });
+    return counter === 1;
 }
 
-Examples:
+// Examples:
 
 let result1 = one(['x', 'y', 'z'], function(el) {
     return el === 'a';

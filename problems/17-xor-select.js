@@ -32,10 +32,16 @@ console.log(
 *******************************************************************************/
 
 let xorSelect = function(array, cb1, cb2) {
-  // Your code here
+  let newArr = [];
+  array.forEach( element => {
+    if((cb1(element) && !cb2(element)) || (!cb1(element) && cb2(element))){
+      newArr.push(element);
+    }
+  })
+  return newArr;
 };
 
-Examples:
+// Examples:
 
 let isEven = function(n) {
   return n % 2 === 0;
