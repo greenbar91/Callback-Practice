@@ -11,7 +11,22 @@ console.log(minValueCallback([64, 25, 49, 9, 100], Math.sqrt));  // 3
 *******************************************************************************/
 
 function minValueCallback(array, cb) {
-    // Your code here
+
+if(cb === undefined){
+  cb = value => value
+}
+
+
+let newValue = array.reduce((acc, element) => {
+  if(cb(element) < cb(acc)){
+    acc = element
+  }
+
+  return acc
+}, array[0])
+
+return cb(newValue)
+
 }
 
 Examples:

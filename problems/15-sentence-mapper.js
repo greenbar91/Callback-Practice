@@ -26,10 +26,17 @@ console.log(result2); // 'ths s prtty cl rght'
 *******************************************************************************/
 
 let sentenceMapper = function (sentence, cb) {
-  // Your code here
+  let splitMap = sentence.split(' ');
+
+  let newSentence = splitMap.map(word => {
+   return cb(word)
+
+  })
+
+  return newSentence.join(' ')
 };
 
-Examples:
+
 
 let result1 = sentenceMapper("what is the answer?", function(word) {
     return word.toUpperCase() + "!";

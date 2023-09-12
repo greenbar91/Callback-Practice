@@ -19,10 +19,14 @@ console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
 function mapMutator(array, cb) {
-  // Your code here
+
+  array.forEach((element, index) => {
+    array.splice(index, 1, cb(element, index))
+  })
+
 }
 
-Examples:
+
 
 let arr1 = [4, 2, 6, 5];
 mapMutator(arr1, function (el) {
