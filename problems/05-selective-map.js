@@ -37,16 +37,7 @@ console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isPositive, square));
 *******************************************************************************/
 
 function selectiveMap(array, selector, mapper) {
-    let newArr = [];
-    for(let i = 0; i < array.length; i++){
-        if(selector(array[i])){
-            newArr.push(mapper(array[i]));
-        }else {
-            newArr.push(array[i]);
-        }
 
-    }
-    return newArr;
 }
 
 function isEven(n) {

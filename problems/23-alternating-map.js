@@ -35,10 +35,11 @@ console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper))
 *******************************************************************************/
 
 function alternatingMap(array, cb1, cb2) {
-  // Your code here
+
+
 }
 
-Examples:
+
 
 let triple = function (n) {
     return 3 * n;

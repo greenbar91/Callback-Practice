@@ -28,11 +28,7 @@ console.log(result4); // true
 *******************************************************************************/
 
 function exactly(array, num, cb) {
-let counter = 0;
-array.forEach( element =>{
-  if(cb(element)) counter ++
-})
-return counter === num;
+
 }
 
 let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {

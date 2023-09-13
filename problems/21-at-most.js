@@ -24,7 +24,7 @@ function atMost(array, max, cb) {
   // Your code here
 }
 
-Examples:
+
 
 let isPositive = function (n) {
     return n > 0;

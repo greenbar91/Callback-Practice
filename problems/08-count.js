@@ -28,14 +28,7 @@ console.log(result4); // 0
 
 function count(array, cb) {
 
-  let counter = 0;
 
-  array.forEach(element => {
-    if(cb(element)){
-      counter++
-    }
-  })
-  return counter
 
 }
 

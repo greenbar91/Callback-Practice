@@ -23,10 +23,7 @@ console.log(result3); // hi!!!!!
 
 function multiMap(val, n, cb) {
 
-  for(let i = 0; i < n; i++){
-    val = cb(val)
-  }
-return val
+
 }
 
 let result1 = multiMap(7, 2, function(n) {

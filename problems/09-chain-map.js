@@ -31,9 +31,7 @@ console.log(chainMap(4, half, square));         // 4
 
 function chainMap(val, ...callbacks) {
 
-let newArr = [...callbacks];
 
-return newArr.reduce((acc, cb) => acc = cb(acc), val)
 
 }
 

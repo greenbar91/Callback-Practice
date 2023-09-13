@@ -38,11 +38,7 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-    let counter = 0;
-    array.forEach((element, i) => {
-        if(cb(element, i)) counter++
-    });
-    return counter === 1;
+  
 }
 
 // Examples:

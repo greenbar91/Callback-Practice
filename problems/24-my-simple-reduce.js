@@ -31,10 +31,12 @@ console.log(result3); // 8
 *******************************************************************************/
 
 function mySimpleReduce(array, cb) {
-  // Your code here
+
+
+
 }
 
-Examples:
+
 
 let result1 = mySimpleReduce([5, 3, 2, 4], function(sum, el) {
     return sum + el;

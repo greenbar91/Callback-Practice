@@ -30,13 +30,7 @@ console.log(result4);   // false
 
 function none(array, cb) {
 
-  for(let i = 0; i < array.length; i++) {
-    if (cb(array[i])) {
-      return false;
-    }
-  };
-
-  return true;
+ 
 }
 
 let result1 = none(["ruby", "topaz", "opal"], function (w) {

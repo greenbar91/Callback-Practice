@@ -20,9 +20,7 @@ console.log(arr2); // [ 0, 9, 20 ]
 
 function mapMutator(array, cb) {
 
-  array.forEach((element, index) => {
-    array.splice(index, 1, cb(element, index))
-  })
+
 
 }
 

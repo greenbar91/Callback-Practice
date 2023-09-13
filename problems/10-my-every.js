@@ -8,13 +8,7 @@ Do not use the built in Array.every.
 *******************************************************************************/
 
 function myEvery(array, cb) {
-let result = true;
-    array.forEach( element => {
-        if(!cb(element)){
-            result = false;
-        }
-    })
-    return result;
+
 }
 
 let isEven = function (num) {

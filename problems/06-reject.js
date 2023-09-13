@@ -22,13 +22,7 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 *******************************************************************************/
 
 function reject(array, cb) {
-  let newArr = [];
-  for(let i = 0; i < array.length; i++){
-    if(!cb(array[i])){
-      newArr.push(array[i])
-    }
-  }
-  return newArr;
+
 }
 
 let isEven = function(n) {
